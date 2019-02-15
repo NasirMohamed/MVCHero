@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.HeroList
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<h3>Are you sure you want to delete this?</h3>
+<dl class="jumbotron">
+    <dt>
+        @Html.DisplayNameFor(m => m.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(m => m.YearCreated)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.YearCreated)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(m => m.Medium)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Medium)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(m => m.Founder)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Founder)
+    </dd>
+</dl>
+@using (Html.BeginForm())
+{
+    <input id="Submit1" type="submit" value="Delete Record" />
+    @Html.ActionLink("Back to List", "Index")
+}

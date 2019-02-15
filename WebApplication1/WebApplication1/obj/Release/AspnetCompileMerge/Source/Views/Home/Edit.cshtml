@@ -1,0 +1,33 @@
+﻿@model WebApplication1.Models.HeroList
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    <h4>Hero</h4>
+    <hr />
+    <div class="jumbotron">
+        @Html.ValidationSummary()
+
+        @Html.LabelFor(m => m.Name)
+        @Html.EditorFor(m => m.Name)
+
+        @Html.LabelFor(m => m.YearCreated)
+        @Html.EditorFor(m => m.YearCreated)
+
+        @Html.LabelFor(m => m.Medium)
+        @Html.EditorFor(m => m.Medium)
+
+        @Html.LabelFor(m => m.Founder)
+        @Html.EditorFor(m => m.Founder)
+
+        @Html.LabelFor(m => m.Picture)
+        @Html.EditorFor(m => m.Picture)
+    </div>
+    <input type="submit" value="Submit Changes" />
+}
+@Html.ActionLink("Back to List", "Index")

@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.HeroList
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<h4>Hero</h4>
+
+<dl class="jumbotron">
+    <dt>
+        @Html.DisplayNameFor(m => m.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(m => m.YearCreated)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.YearCreated)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(m => m.Medium)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Medium)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(m => m.Founder)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Founder)
+    </dd>
+</dl>
+<p>
+    @Html.ActionLink("Edit Record", "Edit", new { id = Model.Id })
+    @Html.ActionLink("Back to List", "Index")
+</p>
